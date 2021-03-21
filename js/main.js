@@ -16,14 +16,7 @@ function toggleActive(e) {
 	}
 }
 
-panelse.addEventListener('click', function (e) {
-	if (e.target.closest('.panel')) {
-		toggleOpen(e);
-	}
-})
-
-document.body.addEventListener('transitionend', function (e) {
-	toggleActive(e)
-})
+panelse.addEventListener('click', toggleOpen)
+document.body.addEventListener('transitionend', toggleActive)
 
 
