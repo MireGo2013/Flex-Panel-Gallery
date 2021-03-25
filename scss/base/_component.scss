@@ -10,6 +10,7 @@
 	text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 rgba(0, 0, 0, 0.45);
 	@include adaptive-font(40, 9);
 	transition: all 0.5s ease-in-out;
+	pointer-events: none;
 }
 
 .panel > *:first-child {
