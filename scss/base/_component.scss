@@ -1,0 +1,31 @@
+.panel p {
+	color: whitesmoke;
+	width: 100%;
+	flex: 1 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	font-family: "Amatic SC", cursive;
+	text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 rgba(0, 0, 0, 0.45);
+	@include adaptive-font(40, 9);
+	transition: all 0.5s ease-in-out;
+	pointer-events: none;
+}
+
+.panel > *:first-child {
+	transform: translateY(-100%);
+}
+.panel > *:last-child {
+	transform: translateY(100%);
+}
+.panel.active > *:nth-child(2) {
+	@include adaptive-font(60, 40);
+}
+.panel.active > *:first-child {
+	transform: translateY(0%);
+}
+
+.panel.active > *:last-child {
+	transform: translateY(0%);
+}
